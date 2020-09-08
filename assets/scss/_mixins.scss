@@ -1,0 +1,80 @@
+/*
+A simple little SCSS mixin for creating scrim gradients
+Inspired by Andreas Larson - https://github.com/larsenwork
+https://css-tricks.com/easing-linear-gradients/
+Original:
+0: 1,
+19: 0.738,
+34: 0.541,
+47: 0.382,
+56.5: 0.278,
+65: 0.194,
+73: 0.126,
+80.2: 0.075,
+86.1: 0.042,
+91: 0.021,
+95.2: 0.008,
+98.2: 0.002,
+100: 0
+
+Halved:
+0: 1,
+9.5: 0.738,
+17: 0.541,
+23.5: 0.382,
+28.25: 0.278,
+32: 0.194,
+36.5: 0.126,
+40.1: 0.075,
+43.05: 0.042,
+45.5: 0.021,
+47.6: 0.008,
+49.1: 0.002,
+50: 0,
+100: 0,
+
+Quartered and inverted:
+0: 0,
+9.5: 0.262,
+17: 0.459,
+23.5: 0.618,
+28.25: 0.722,
+32: 0.806,
+36.5: 0.874,
+40.1: 0.925,
+43.05: 0.958,
+45.5: 0.979,
+47.6: 0.992,
+49.1: 0.998,
+50: 1,
+100: 1,
+*/
+@mixin scrimGradient($direction: 'to bottom', $startColor: hsl(0, 0, 0)) {
+  $scrimCoordinates: (
+    0: 0,
+    9.5: 0.262,
+    17: 0.459,
+    23.5: 0.618,
+    28.25: 0.722,
+    32: 0.806,
+    36.5: 0.874,
+    40.1: 0.925,
+    43.05: 0.958,
+    45.5: 0.979,
+    47.6: 0.992,
+    49.1: 0.998,
+    50: 1,
+    100: 1
+  );
+  $hue: hue($startColor);
+  $saturation: saturation($startColor);
+  $lightness: lightness($startColor);
+  $stops: ();
+
+  @each $colorStop, $alphaValue in $scrimCoordinates {
+    $stop: hsla($hue, $saturation, $lightness, $alphaValue)
+      percentage($colorStop/100);
+    $stops: append($stops, $stop, comma);
+  }
+  background: linear-gradient(unquote($direction), $stops);
+}

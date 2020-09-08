@@ -1,0 +1,22 @@
+a {
+  color: var(--text-secondary);
+  @apply font-bold transition-colors duration-200 ease-in-out;
+}
+
+.title {
+  color: var(--color-primary);
+  @apply block font-bold text-5xl tracking-wide transition-colors duration-200 ease-in-out;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  word-spacing: 0.15em;
+  @apply block font-light text-3xl tracking-wide pb-4 transition-colors duration-200 ease-in-out;
+}
+
+.light-mode {
+  .title {
+    color: var(--color-primary-600);
+    @apply block font-bold text-5xl tracking-wide transition-colors duration-200 ease-in-out;
+  }
+}
