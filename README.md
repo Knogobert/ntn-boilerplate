@@ -7,7 +7,7 @@ An opinionated starter template for a quick start with the following technologie
 - Vue 2
 - Vuex
 - Nuxt.js (in "universal mode", where both SEO and speed is great)
-- SCSS
+- PostCSS (no SCSS)
 - Tailwind
 - PurgeCSS (removes unused CSS-selectors)
 - Dark mode & custom ColorModePicker (Set to "dark mode first")
@@ -19,7 +19,7 @@ An opinionated starter template for a quick start with the following technologie
 
 ## 🎉 Getting Started
 
-1. [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/knogobert/nuxt-tailwind-netlifycms-boilerplate)
+1. [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/knogobert/ntn-boilerplate)
 
 2. Git clone the repo
 

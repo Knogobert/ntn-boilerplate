@@ -49,6 +49,8 @@ Quartered and inverted:
 50: 1,
 100: 1,
 */
+
+/** WIP translating this from SCSS to PostCSS */
 @mixin scrimGradient($direction: 'to bottom', $startColor: hsl(0, 0, 0)) {
   $scrimCoordinates: (
     0: 0,
@@ -72,8 +74,7 @@ Quartered and inverted:
   $stops: ();
 
   @each $colorStop, $alphaValue in $scrimCoordinates {
-    $stop: hsla($hue, $saturation, $lightness, $alphaValue)
-      percentage($colorStop/100);
+    $stop: hsla($hue, $saturation, $lightness, $alphaValue) percentage($colorStop/100);
     $stops: append($stops, $stop, comma);
   }
   background: linear-gradient(unquote($direction), $stops);

@@ -1,6 +1,6 @@
 .container {
   min-height: 100vh;
-  padding-top: 56px; // header height
+  padding-top: 56px; /* header height */
   @apply my-0 mx-auto flex justify-center items-start text-center flex-col;
 }
 
@@ -10,7 +10,7 @@
 
 .articles {
   @apply text-left w-full py-4 rounded-lg;
-  .article {
+  & .article {
     @apply max-w-5xl mx-auto px-4 py-2 rounded border border-solid border-primary;
 
     &.article--clickable {
@@ -23,7 +23,7 @@
 .article {
   @apply text-left block w-full duration-100;
 
-  .article-title {
+  & .article-title {
     @apply font-bold text-2xl;
   }
 }
@@ -33,10 +33,10 @@
   @apply w-full object-cover my-4;
 }
 
-//* LIGHT MODE
+/** LIGHT MODE */
 .light-mode {
-  .articles {
-    .article {
+  & .articles {
+    & .article {
       @apply border-primary-400;
 
       &.article--clickable {

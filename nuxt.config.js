@@ -1,5 +1,8 @@
 import glob from 'glob'
 import path from 'path'
+import postcssImport from 'postcss-import'
+import postcssNesting from 'postcss-nesting'
+import postcssPresetEnv from 'postcss-preset-env'
 import * as SITE_INFO from './assets/content/site/info.json'
 import { COLOR_MODE_FALLBACK } from './utils/globals.js'
 
@@ -49,7 +52,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/css/tailwind.css', '@/assets/scss/main.scss'],
+  css: ['@/assets/css/tailwind.css', '@/assets/css/main.pcss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -72,7 +75,15 @@ export default {
     extractCSS: true,
     postcss: {
       plugins: {
-        tailwindcss: path.resolve(__dirname, './tailwind.config.js')
+        'postcss-import': postcssImport,
+        tailwindcss: path.resolve(__dirname, './tailwind.config.js'),
+        'postcss-nesting': postcssNesting,
+        'postcss-preset-env': postcssPresetEnv({
+          stage: 1,
+          features: {
+            'nesting-rules': false
+          }
+        })
       }
     },
     /*

@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 .nuxt-link-exact-active {
   @apply text-accent-100 bg-accent bg-opacity-20;
   &:hover {
@@ -28,7 +28,7 @@ export default {
   }
 }
 .light-mode {
-  .nuxt-link-exact-active {
+  & .nuxt-link-exact-active {
     @apply text-accent-600;
     &:hover {
       @apply text-white;

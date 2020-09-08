@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/knogobert/nuxt-tailwind-netlifycms-boilerplate#readme"
+    "url": "https://github.com/knogobert/ntn-boilerplate#readme"
   },
   "license": "MIT",
   "dependencies": {
@@ -26,11 +26,12 @@
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
     "netlify-cli": "^2.54.0",
-    "node-sass": "^4.14.1",
     "nuxt-purgecss": "^1.0.0",
     "path": "^0.12.7",
+    "postcss-import": "^12.0.1",
+    "postcss-nesting": "^7.0.1",
+    "postcss-preset-env": "^6.7.0",
     "prettier": "^1.16.4",
-    "sass-loader": "^8.0.2",
     "tailwindcss": "^1.8.5",
     "tailwindcss-dark-mode": "^1.1.6"
   }

@@ -4,13 +4,13 @@
     @apply border-gray-200 bg-accent-600 text-white;
   }
 
-  &--active {
+  &.btn--active {
     @apply text-white bg-accent border-accent;
     &:hover {
       @apply bg-primary-600;
     }
   }
-  &--disabled,
+  &.btn--disabled,
   &[disabled='true'],
   :disabled {
     @apply text-gray-400 cursor-not-allowed;
@@ -18,7 +18,7 @@
 }
 
 .light-mode {
-  .btn {
+  & .btn {
     @apply border-white text-accent;
     &:hover {
       @apply border-gray-200 bg-accent-600 text-white;
