@@ -80,6 +80,7 @@ dist
 # IDE / Editor
 .idea
 .editorconfig
+.code-workspace
 
 # Service worker
 sw.*
@@ -89,3 +90,6 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# Local Netlify folder
+.netlify

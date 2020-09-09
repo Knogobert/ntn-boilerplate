@@ -1,6 +1,6 @@
 {
   "name": "ntn-boilerplate",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Nuxt-Tailwind-NetlifyCMS boilerplate",
   "author": "Sven Parker <sven@svenparker.com> (https://svenparker.com)",
   "scripts": {
@@ -25,7 +25,7 @@
     "@nuxtjs/tailwindcss": "^3.0.2",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
-    "netlify-cli": "^2.54.0",
+    "netlify-cli": "^2.64.1",
     "nuxt-purgecss": "^1.0.0",
     "path": "^0.12.7",
     "postcss-import": "^12.0.1",
