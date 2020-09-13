@@ -38,7 +38,13 @@ export default {
         name: 'description',
         content: SITE_INFO.sitedescription || process.env.npm_package_description || ''
       }
-    ]
+    ],
+    link: [
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400&display=swap'
+      }
+    ] // ? Imports the font 'Karla' and is optimized by the netlify plugin 'Subfont'
   },
   generate: {
     routes: dynamicRoutes,

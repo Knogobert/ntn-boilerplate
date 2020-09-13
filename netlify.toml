@@ -1,3 +1,6 @@
 [build]
-  publish = "dist/"
-  command = "npm run generate"
+command = "npm run generate"
+publish = "dist/"
+
+[[plugins]]
+package = "netlify-plugin-subfont"

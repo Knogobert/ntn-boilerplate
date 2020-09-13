@@ -22,10 +22,11 @@ An opinionated starter template for a quick start with the following technologie
 - Git LFS (store uploaded images outside the main repo)
 - Netlify LM (Netlify’s Git LFS support)
 - Prettier
+- Subfont
 
 ## 🎉 Getting Started
 
-1. [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/knogobert/ntn-boilerplate&stack=cms)
+1. [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/knogobert/ntn-boilerplate&stack=cms#GIT_LFS_ENABLED=true)
 
 2. **Setup Netlify CMS** by registering a regular email-account (not OAuth yet!) with a [generated password](https://passwordwolf.com/) on *your site* by going to your `/admin` (https://YOUR_NETLIFY_SITE_SLUG.netlify.app/admin) and then after that [set the registration to invite only](https://app.netlify.com/sites/YOUR_NETLIFY_SITE_SLUG/settings/identity#registration-preferences)
 
@@ -92,6 +93,12 @@ npm run generate
    - Content is managed mainly in [local Netlify CMS](http://localhost:3000/admin) or by hand in `assets/content`
    - Content collections are managed in `static/admin/config.yml`, then added to vuex store in `store/index.js`
 
+4. Change font
+
+   1. Add/change your font link in `nuxt.config.js` under `head.link`. You can add a `<link rel="stylesheet" href="font.css">` as `link: [{ rel: 'stylesheet', href: 'font.css' }]`, like [this](https://vue-meta.nuxtjs.org/api/#link)
+   2. Then append your font name in `tailwind.config.js` under `theme.extend.fontFamily.sans` (or other). Like `sans: ['Europa', ...defaultTheme.fontFamily.sans]`
+   3. Then if you've installed the included netlify plugin "[Subfont](https://github.com/Munter/netlify-plugin-subfont#readme)", it will automatically post-processes your web page to use an optimal font loading strategy.
+
 ## More info
 
 > This project was bootstrapped with `create-nuxt-app`. There are more detailed explanations of how everything works in the [Nuxt.js docs](https://nuxtjs.org).
@@ -107,7 +114,7 @@ When you create your first account, _don’t_ sign up using OAuth, generate a ne
 Originally based on [Henry Desroches' nuxt-netlify-cms-starter](https://github.com/xdesro/nuxt-netlify-cms-starter).
 
 Deployed easily with their boilerplate via:
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/xdesro/nuxt-netlify-cms-starter&stack=cms)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/xdesro/nuxt-netlify-cms-starter&stack=cms#GIT_LFS_ENABLED=true)
 
 ---
 
