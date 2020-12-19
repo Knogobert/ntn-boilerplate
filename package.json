@@ -15,24 +15,25 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@nuxtjs/markdownit": "^1.2.6",
-    "nuxt": "^2.14.6"
+    "@nuxtjs/markdownit": "^2.0.0",
+    "nuxt": "^2.15.0"
   },
   "devDependencies": {
-    "@nuxtjs/color-mode": "^1.1.1",
-    "@nuxtjs/pwa": "^3.0.2",
+    "@nuxtjs/color-mode": "^2.0.3",
+    "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/svg": "^0.1.12",
-    "@nuxtjs/tailwindcss": "^3.1.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "netlify-cli": "^2.64.1",
+    "@nuxtjs/tailwindcss": "^3.4.2",
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "netlify-cli": "^3.8.3",
     "nuxt-purgecss": "^1.0.0",
     "path": "^0.12.7",
     "postcss-import": "^12.0.1",
     "postcss-nesting": "^7.0.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^1.16.4",
-    "tailwindcss": "^1.8.10",
-    "tailwindcss-dark-mode": "^1.1.6"
+    "tailwindcss": "^1.9.6",
+    "tailwindcss-dark-mode": "^1.1.7"
   }
 }

@@ -16,7 +16,6 @@ const dynamicRoutes = getDynamicPaths(
 )
 
 export default {
-  mode: 'universal',
   // ? The env Property: https://nuxtjs.org/api/configuration-env/
   env: {
     url:

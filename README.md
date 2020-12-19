@@ -20,7 +20,6 @@ An opinionated starter template for a quick start with the following technologie
 - PWA (install website as standalone app)
 - Netlify CMS (no need for a separate server)
 - Prettier
-- Subfont
 
 ##### Optional extra setup
 - Git LFS (store uploaded images outside the main repo)
@@ -137,9 +136,9 @@ Deployed easily with their boilerplate via:
 
   - It may be that you haven't [enabled Netlify Identity](https://app.netlify.com/sites/YOUR_NETLIFY_SITE_SLUG/settings/identity) or [setup the Git Gateway](https://app.netlify.com/sites/YOUR_NETLIFY_SITE_SLUG/settings/identity#services) correctly, [check the docs](https://www.netlifycms.org/docs/git-gateway-backend/)
 
-- > This repository is configured for Git LFS but 'git-lfs' was not found on your path. If you no longer wish to use Git LFS, remove this hook by deleting .git/hooks/pre-push.
+- > "This repository is configured for Git LFS but 'git-lfs' was not found on your path."
 
-  - Install git-lfs then run `git lfs install` in project root
+  - Install git-lfs then run `git lfs install` in project root. Then to download the images, run `git lfs pull`. Or if you don't want to download the files/can't login to the lfs server, run `git lfs install --skip-smudge` instead.
 
 - > I can’t get Git LFS to run correctly on Netlify
 
