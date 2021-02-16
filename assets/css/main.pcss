@@ -1,11 +1,18 @@
-/* @import './_mixins.pcss'; */
-@import './_vars.pcss';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-@import './_reset.pcss';
+@import './_vars.pcss';
+@import './_mixins.pcss';
 @import './_transitions.pcss';
 @import './_globals.pcss';
+
+/* @layer base START */
 @import './_typography.pcss';
 @import './_grid.pcss';
+@import './_cards.pcss';
+/* @layer base END */
 
-@import './_icons.pcss';
+/* @layer components START */
 @import './_btns.pcss';
+/* @layer components END */

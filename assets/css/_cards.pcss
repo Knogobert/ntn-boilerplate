@@ -1,0 +1,74 @@
+@layer base {
+  .cards {
+    @apply w-full py-4 rounded-lg;
+    & .card {
+      @apply flex flex-col justify-between items-start max-w-5xl mx-auto px-4 py-4 rounded border border-solid border-primary;
+
+      & .cover-image {
+        @apply mb-0 w-full rounded-sm;
+      }
+
+      &.card--clickable {
+        &:hover {
+          @apply border-primary-300 bg-primary-800 text-white;
+          & .card-title {
+            @apply text-white;
+          }
+        }
+      }
+    }
+
+    & li + li,
+    & .card + .card {
+      @apply mt-4;
+    }
+  }
+  .card {
+    @apply block w-full duration-100;
+  }
+  .card-title {
+    @apply font-bold;
+  }
+
+  .cover-image {
+    max-height: 500px;
+    @apply w-full object-cover rounded my-4;
+  }
+
+  .light-mode {
+    & .cards {
+      & .card {
+        @apply border-primary-400;
+
+        &.card--clickable {
+          &:hover {
+            @apply border-primary-300 bg-primary-200 text-primary-900;
+            & .card-title {
+              @apply text-primary-900;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @screen sm {
+    .cards {
+      & .card {
+        @apply flex-row;
+        & .cover-image {
+          @apply mt-0 ml-2 w-1/2;
+        }
+      }
+    }
+  }
+  @screen md {
+    .cards {
+      & .card {
+        & .cover-image {
+          @apply w-1/3;
+        }
+      }
+    }
+  }
+}

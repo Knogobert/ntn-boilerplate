@@ -1,26 +1,29 @@
 <template>
-  <main
-    v-if="projectPosts"
-    class="main"
-  >
-    <h1 class="title text-left">Projects</h1>
-    <ul
-      v-for="(projectPost, index) in projectPosts"
-      :key="index"
-      class="articles"
-    >
-      <nuxt-link
-        class="article article--clickable"
-        :to="`projects/${projectPost.slug}`"
+  <section v-if="projectPosts">
+    <h1 class="title">Projects</h1>
+    <ul class="cards">
+      <li
+        v-for="(projectPost, index) in projectPosts"
+        :key="index"
       >
-        <h3 class="article-title">{{ projectPost.title }}</h3>
-        <div class="mt-4 mb-2">
-          <h2 class="inline py-1 px-2 mr-1 bg-accent text-white font-medium rounded-sm dark:bg-accent">{{ projectPost.project_type }}</h2>
-          <p class="inline">{{ projectPost.description }}</p>
-        </div>
-      </nuxt-link>
+        <nuxt-link
+          class="card card--clickable"
+          :to="`projects/${projectPost.slug}`"
+        >
+          <span>
+            <h6 class="inline-block py-1 px-2 mr-1 bg-gray text-white text-sm font-medium rounded-sm">{{ projectPost.category }}</h6>
+            <h3 class="card-title">{{ projectPost.title }}</h3>
+            <p class="mt-2">{{ projectPost.description }}</p>
+          </span>
+          <img
+            v-if="projectPost.cover"
+            class="cover-image"
+            :src="projectPost.cover"
+          >
+        </nuxt-link>
+      </li>
     </ul>
-  </main>
+  </section>
 </template>
 <script>
 export default {

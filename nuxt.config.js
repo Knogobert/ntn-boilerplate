@@ -16,6 +16,8 @@ const dynamicRoutes = getDynamicPaths(
 )
 
 export default {
+  target: 'static',
+  components: true,
   // ? The env Property: https://nuxtjs.org/api/configuration-env/
   env: {
     url:
@@ -69,11 +71,11 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#f3f5f4' },
+  loading: { color: '#526488' },
   /*
    ** Global CSS
    */
-  css: ['@/assets/css/tailwind.css', '@/assets/css/main.pcss'],
+  css: ['@/assets/css/main.pcss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -122,7 +124,7 @@ export default {
   purgeCSS: {
     mode: 'postcss',
     whitelist: ['dark-mode', 'light-mode', 'btn', 'icon', 'main'],
-    whitelistPatterns: [/^article/, /image$/]
+    whitelistPatterns: [/^card/, /^md-content/, /image$/, /title$/]
   },
   colorMode: {
     preference: 'system', // default value of $colorMode.preference

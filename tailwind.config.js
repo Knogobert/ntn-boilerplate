@@ -14,36 +14,38 @@ module.exports = {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: {
-          100: '#ECEFF5',
-          200: '#CBD2E1',
-          300: '#ABB6CD',
-          400: '#8C9AB7',
-          500: '#6F7FA0',
-          default: '#526488',
-          600: '#3E4F70',
-          700: '#2C3A57',
-          800: '#1C263B',
-          900: '#0D131E'
+        gray: {
+          '50': 'var(--color-gray-50)',      // #F9FAFB
+          '100': 'var(--color-gray-100)',    // #F3F4F6
+          '200': 'var(--color-gray-200)',    // #E5E7EB
+          '300': 'var(--color-gray-300)',    // #D1D5DB
+          '400': 'var(--color-gray-400)',    // #9CA3AF
+          default: 'var(--color-gray)',      // #6B7280
+          '600': 'var(--color-gray-600)',    // #4B5563
+          '700': 'var(--color-gray-700)',    // #374151
+          '800': 'var(--color-gray-800)',    // #1F2937
+          '900': 'var(--color-gray-900)',    // #111827
         },
-        accent: {
-          100: '#F9E9EA',
-          200: '#EEC3C6',
-          300: '#E09FA4',
-          400: '#CF7D83',
-          500: '#BD5D65',
-          default: '#A84048',
-          600: '#8D2D34',
-          700: '#6E1D23',
-          800: '#4D1015',
-          900: '#280709'
-        }
+        primary: {
+          '100': 'var(--color-primary-100)', // #ECEFF5
+          '200': 'var(--color-primary-200)', // #C3CBDC
+          '300': 'var(--color-primary-300)', // #9BA8C2
+          '400': 'var(--color-primary-400)', // #7686A6
+          default: 'var(--color-primary)',   // #526488
+          '600': 'var(--color-primary-600)', // #3E4F70
+          '700': 'var(--color-primary-700)', // #2C3A57
+          '800': 'var(--color-primary-800)', // #1C263B
+          '900': 'var(--color-primary-900)', // #0D131E
+        },
+      },
+      screens: {
+        'xs': '480px', // Added xs
+        // 'sm': '640px',
+        // 'md': '768px',
+        // 'lg': '1024px',
+        // 'xl': '1280px',
       },
     },
-    boxShadow: {
-      ...defaultTheme.boxShadow,
-      outline: '0 0 0 3px rgba(0, 86, 87,0.5)'
-    }
   },
   variants: {
     backgroundColor: ['dark', 'dark-hover', 'dark-group-hover'],

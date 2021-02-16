@@ -1,22 +1,188 @@
-a {
-  color: var(--text-secondary);
-  @apply font-bold transition-colors duration-200 ease-in-out;
-}
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: var(--text);
+    @apply transition-colors duration-200 ease-in-out;
+    & + h1,
+    & + h2,
+    & + h3,
+    & + h4,
+    & + h5,
+    & + h6,
+    & + p {
+      @apply mt-4;
+    }
+  }
 
-.title {
-  color: var(--color-primary);
-  @apply block font-bold text-5xl tracking-wide transition-colors duration-200 ease-in-out;
-}
+  h1 {
+    @apply
+      font-sans
+      font-bold
+      text-2xl
+      leading-tight
+      tracking-tight;
+  }
 
-.subtitle {
-  color: var(--text-secondary);
-  word-spacing: 0.15em;
-  @apply block font-light text-3xl tracking-wide pb-4 transition-colors duration-200 ease-in-out;
-}
+  h2 {
+    @apply
+      font-sans
+      font-semibold
+      text-xl
+      leading-tight
+      tracking-tight;
+  }
 
-.light-mode {
+  h3 {
+    @apply
+      font-sans
+      font-bold
+      text-xl
+      leading-tight;
+  }
+
+  h4 {
+    @apply
+      font-sans
+      font-normal
+      text-xl
+      leading-tight;
+  }
+
+  h5 {
+    @apply
+      text-lg
+      leading-tight
+      tracking-wide;
+  }
+
+  h6 {
+    @apply
+      font-light
+      text-lg
+      leading-tight
+      tracking-wide
+      uppercase;
+  }
+
+  p {
+    color: var(--text);
+    @apply font-sans leading-normal transition-colors duration-200 ease-in-out;
+
+    & + h1,
+    & + h2,
+    & + h3,
+    & + h4,
+    & + h5,
+    & + h6,
+    & + p {
+      @apply mt-4;
+    }
+
+    & a[href] {
+      color: var(--text-secondary);
+
+      @apply underline;
+    }
+  }
+
+  a {
+    color: var(--text-secondary);
+    @apply transition-colors duration-200 ease-in-out;
+  }
+
   .title {
-    color: var(--color-primary-600);
-    @apply block font-bold text-5xl tracking-wide transition-colors duration-200 ease-in-out;
+    color: var(--text-secondary);
+    @apply block text-2xl font-sans font-bold transition-colors duration-200 ease-in-out;
+  }
+
+  .subtitle {
+    color: var(--text);
+    @apply block text-xl font-sans font-bold transition-colors duration-200 ease-in-out;
+  }
+
+  .md-content {
+    @apply my-8;
+
+    & p {
+      & + h1,
+      & + h2,
+      & + h3,
+      & + h4,
+      & + h5,
+      & + h6 {
+        @apply mt-8;
+      }
+    }
+    & h3 {
+      @apply
+        text-lg
+        font-bold;
+    }
+    & img {
+      @apply mx-auto my-4 rounded;
+    }
+    & ol > li,
+    & ul > li {
+      color: var(--text);
+      @apply font-sans leading-normal transition-colors duration-200 ease-in-out;
+    }
+    & > ol {
+      @apply list-decimal grid gap-y-2 my-4 ml-4;
+      & ol {
+        @apply list-decimal grid gap-y-1 ml-8 mt-2;
+      }
+    }
+    & > ul {
+      @apply list-disc grid gap-y-2 my-4 ml-4;
+      & ul {
+        @apply list-disc grid gap-y-1 ml-8 mt-2;
+      }
+    }
+  }
+
+  @screen sm {
+    .title {
+      @apply text-4xl;
+    }
+    .subtitle {
+      @apply text-3xl;
+    }
+    .md-content {
+      & ul {
+        @apply ml-0;
+      }
+    }
+  }
+
+  @screen md {
+    h1 {
+      @apply text-4xl leading-none;
+    }
+
+    h2 {
+      @apply text-3xl;
+    }
+
+    h3 {
+      @apply text-2xl;
+    }
+
+    h4 {
+      @apply text-xl;
+    }
+
+    h5,
+    h6 {
+      @apply text-lg;
+    }
+
+    p {
+      @apply leading-relaxed;
+    }
   }
 }

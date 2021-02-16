@@ -1,31 +1,29 @@
 <template>
-  <main
-    v-if="blogPosts"
-    class="main"
-  >
-    <h1 class="title text-left">Blog</h1>
-    <ul
-      v-for="(blogPost, index) in blogPosts"
-      :key="index"
-      class="articles"
-    >
-      <nuxt-link
-        :to="`blog/${blogPost.slug}`"
-        class="article article--clickable"
+  <section v-if="blogPosts">
+    <h1 class="title">Blog</h1>
+    <ul class="cards">
+      <li
+        v-for="(blogPost, index) in blogPosts"
+        :key="index"
       >
-        <div class="flex justify-between align-baseline">
-          <h3 class="article-title">{{ blogPost.title }}</h3>
-          <h6
-            v-if="blogPost.date"
-            class="inline-block py-1 px-2 bg-accent text-white font-medium rounded-sm dark:bg-accent whitespace-no-wrap"
-          >{{ formatDate(blogPost.date) }}</h6>
-        </div>
-        <div class="mt-4 mb-2">
-          <p class="inline">{{ blogPost.description }}</p>
-        </div>
-      </nuxt-link>
+        <nuxt-link
+          :to="`blog/${blogPost.slug}`"
+          class="card card--clickable"
+        >
+          <span class="w-full">
+            <span class="flex justify-between align-baseline">
+              <h3 class="card-title">{{ blogPost.title }}</h3>
+              <h6
+                v-if="blogPost.date"
+                class="self-start inline-block mt-0 py-1 px-2 bg-gray text-white text-base font-medium rounded-sm whitespace-no-wrap"
+              >{{ formatDate(blogPost.date) }}</h6>
+            </span>
+            <p class="mt-2">{{ blogPost.description }}</p>
+          </span>
+        </nuxt-link>
+      </li>
     </ul>
-  </main>
+  </section>
 </template>
 <script>
 export default {
