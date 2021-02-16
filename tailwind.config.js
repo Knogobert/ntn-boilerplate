@@ -11,8 +11,7 @@ module.exports = {
     darkSelector: '.dark-mode',
     extend: {
       fontFamily: {
-        sans: ['Karla', ...defaultTheme.fontFamily.sans],
-        mono: [...defaultTheme.fontFamily.mono]
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: {
@@ -40,10 +39,6 @@ module.exports = {
           900: '#280709'
         }
       },
-      opacity: {
-        '10': '0.1',
-        '20': '0.2'
-      }
     },
     boxShadow: {
       ...defaultTheme.boxShadow,

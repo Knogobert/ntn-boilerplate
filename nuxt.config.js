@@ -40,10 +40,26 @@ export default {
     ],
     link: [
       {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: true,
+      },
+      {
+        rel: 'preload',
+        as: 'style',
+        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap',
+      },
+      {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400&display=swap'
+        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap',
+        media: 'print',
+        onload: `this.media='all'`,
       }
-    ] // ? Imports the font 'Karla' and is optimized by the netlify plugin 'Subfont'
+    ], // ? Imports the font 'Inter', can be optimized by the netlify plugin 'Subfont' by uncommenting it in `netlify.toml`
+    noscript: [{
+      innerHTML: '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">'
+    }],
+    __dangerouslyDisableSanitizers: ['noscript']
   },
   generate: {
     routes: dynamicRoutes,
@@ -100,7 +116,7 @@ export default {
    ** Custom additions configuration
    */
   tailwindcss: {
-    cssPath: '~/assets/css/tailwind.css',
+    cssPath: '~/assets/css/main.pcss',
     exposeConfig: false // enables `import { theme } from '~tailwind.config'`
   },
   purgeCSS: {

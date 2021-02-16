@@ -22,7 +22,7 @@ export default {
 
 <style lang="postcss" scoped>
 .nuxt-link-exact-active {
-  @apply text-accent-100 bg-accent bg-opacity-20;
+  @apply text-accent-100 bg-accent bg-opacity-25;
   &:hover {
     @apply text-white bg-accent-600;
   }
