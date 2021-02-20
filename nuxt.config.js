@@ -3,6 +3,7 @@ import path from 'path'
 import postcssImport from 'postcss-import'
 import postcssNesting from 'postcss-nesting'
 import postcssPresetEnv from 'postcss-preset-env'
+import postcssEasingGradients from 'postcss-easing-gradients'
 import * as SITE_INFO from './assets/content/site/info.json'
 import { COLOR_MODE_FALLBACK } from './utils/globals.js'
 
@@ -44,23 +45,26 @@ export default {
       {
         rel: 'preconnect',
         href: 'https://fonts.gstatic.com',
-        crossorigin: true,
+        crossorigin: true
       },
       {
         rel: 'preload',
         as: 'style',
-        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap'
       },
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap',
         media: 'print',
-        onload: `this.media='all'`,
+        onload: `this.media='all'`
       }
     ], // ? Imports the font 'Inter', can be optimized by the netlify plugin 'Subfont' by uncommenting it in `netlify.toml`
-    noscript: [{
-      innerHTML: '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">'
-    }],
+    noscript: [
+      {
+        innerHTML:
+          '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">'
+      }
+    ],
     __dangerouslyDisableSanitizers: ['noscript']
   },
   generate: {
@@ -106,7 +110,8 @@ export default {
           features: {
             'nesting-rules': false
           }
-        })
+        }),
+        'postcss-easing-gradients': postcssEasingGradients
       }
     },
     /*
