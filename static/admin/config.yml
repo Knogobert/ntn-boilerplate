@@ -61,7 +61,7 @@ collections:
           name: 'category',
           widget: 'select',
           default: 'animals',
-          options: [{ label: 'Animals', value: 'animals' }, { label: 'Plants', value: 'plants' }],
+          options: [{ label: 'Animals', value: 'animals' }, { label: 'Food', value: 'food' }],
         }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Description', name: 'description', widget: 'string', required: false }
