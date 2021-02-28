@@ -2,7 +2,7 @@
   <div class="wrapper">
     <Header />
 
-    <main class="main">
+    <main>
       <nuxt />
     </main>
 

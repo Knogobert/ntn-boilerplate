@@ -16,7 +16,7 @@ collections:
     files:
       - label: 'Info'
         name: 'info'
-        file: 'assets/content/site/info.json'
+        file: 'content/site/info.json'
         format: 'json'
         editor:
           preview: false
@@ -37,23 +37,22 @@ collections:
           # - { label: Site Email, name: siteemail, widget: string, required: false }
   - name: 'blog'
     label: 'Blog'
-    folder: 'assets/content/blog'
+    folder: 'content/blog'
     create: true
-    format: 'json'
+    format: 'frontmatter'
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     # editor:
     #   preview: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string', required: true }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime', required: false }
       - { label: 'Description', name: 'description', widget: 'string', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown', required: false }
   - name: 'projects'
     label: 'Projects'
     label_singular: 'Project'
-    folder: 'assets/content/projects'
+    folder: 'content/projects'
     create: true
-    format: 'json'
+    format: 'frontmatter'
     slug: '{{slug}}'
     preview_path: 'projects/{{slug}}'
     fields:

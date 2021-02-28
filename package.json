@@ -15,7 +15,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@nuxtjs/markdownit": "^2.0.0",
+    "@nuxt/content": "^1.13.1",
     "nuxt": "^2.15.0"
   },
   "devDependencies": {

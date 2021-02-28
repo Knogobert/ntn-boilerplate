@@ -38,10 +38,7 @@ export default {
   }
 }
 .nuxt-link-exact-active {
-  @apply text-gray-100 border-gray-400 bg-gray bg-opacity-25;
-  &:hover {
-    @apply text-white bg-gray-600;
-  }
+  @apply text-gray-200 border-gray-400 bg-gray-800 bg-opacity-25 cursor-default;
 }
 
 .light-mode {
@@ -52,10 +49,7 @@ export default {
     }
   }
   & .nuxt-link-exact-active {
-    @apply text-gray-100 border-gray-400;
-    &:hover {
-      @apply text-white;
-    }
+    @apply text-primary-900 border-gray-600 bg-gray-200;
   }
 }
 

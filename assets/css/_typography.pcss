@@ -1,4 +1,9 @@
 @layer base {
+  article {
+    max-width: 80ch;
+    @apply mx-auto;
+  }
+
   h1,
   h2,
   h3,
@@ -105,9 +110,31 @@
     @apply block text-xl font-sans font-bold transition-colors duration-200 ease-in-out;
   }
 
-  .md-content {
+  .nuxt-content {
+    max-width: 80ch;
     @apply my-8;
 
+    & h1,
+    & h2,
+    & h3,
+    & h4,
+    & h5,
+    & h6 {
+      & > a {
+        &::before {
+          content: "#";
+          color: var(--text-secondary);
+          @apply pr-2 -ml-5 opacity-0 transition-opacity duration-100 ease-in-out;
+        }
+      }
+      &:active,
+      &:hover,
+      &:focus {
+        & > a::before {
+          @apply opacity-100;
+        }
+      }
+    }
     & p {
       & + h1,
       & + h2,
@@ -143,6 +170,13 @@
         @apply list-disc grid gap-y-1 ml-8 mt-2;
       }
     }
+    & code,
+    & kbd,
+    & samp {
+      color: var(--text-secondary);
+      background-color: var(--bg-secondary);
+      @apply p-1 rounded transition-colors duration-200 ease-in-out;
+    }
   }
 
   @screen sm {
@@ -152,7 +186,7 @@
     .subtitle {
       @apply text-3xl;
     }
-    .md-content {
+    .nuxt-content {
       & ul {
         @apply ml-0;
       }
