@@ -139,7 +139,7 @@ export default {
       name: SITE_INFO.sitename || process.env.npm_package_name || '',
       lang: process.env.lang,
       ogHost: process.env.URL,
-      ogImage: '/ogp.jpg'
+      ogImage: '/preview.jpg'
     }
   }
 }
