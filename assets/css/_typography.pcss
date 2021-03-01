@@ -124,7 +124,7 @@
         &::before {
           content: "#";
           color: var(--text-secondary);
-          @apply pr-2 -ml-5 opacity-0 transition-opacity duration-100 ease-in-out;
+          @apply -ml-6 opacity-0 transition-opacity duration-100 ease-in-out;
         }
       }
       &:active,
@@ -176,6 +176,22 @@
       color: var(--text-secondary);
       background-color: var(--bg-secondary);
       @apply p-1 rounded transition-colors duration-200 ease-in-out;
+    }
+
+    & .nuxt-content-highlight {
+      @apply relative my-4;
+      & > .filename {
+        color: var(--text-secondary);
+        @apply absolute right-0 top-0 z-10 font-mono text-sm leading-5 mr-4 mt-3;
+      }
+      & pre[class*="language-"] {
+        background-color: var(--bg-secondary);
+        text-shadow: 0 1px rgba(255,255,255,0.5);
+        @apply p-4 rounded transition-colors duration-200 ease-in-out;
+      }
+      & .token.operator {
+        background: none;
+      }
     }
   }
 
