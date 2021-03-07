@@ -68,7 +68,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~/plugins/vue-content-placeholders.js'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -117,7 +117,7 @@ export default {
     // ? Whitelisting docs: https://v1.purgecss.com/whitelisting
     whitelist: ['dark-mode', 'light-mode', 'btn', 'icon', 'main'],
     whitelistPatterns: [/^card/, /^nuxt-content/, /image$/, /title$/],
-    whitelistPatternsChildren: [/^nuxt-content/, /code/, /pre/, /token/]
+    whitelistPatternsChildren: [/^nuxt-content/, /code/, /pre/, /token/, /^vue-content-placeholders/]
   },
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
