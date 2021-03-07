@@ -115,9 +115,9 @@ export default {
   purgeCSS: {
     mode: 'postcss',
     // ? Whitelisting docs: https://v1.purgecss.com/whitelisting
-    whitelist: ['dark-mode', 'light-mode', 'btn', 'icon', 'main', 'code'],
+    whitelist: ['dark-mode', 'light-mode', 'btn', 'icon', 'main'],
     whitelistPatterns: [/^card/, /^nuxt-content/, /image$/, /title$/],
-    whitelistPatternsChildren: [/^nuxt-content/]
+    whitelistPatternsChildren: [/^nuxt-content/, /code/, /pre/, /token/]
   },
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
