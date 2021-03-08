@@ -9,6 +9,9 @@ import { COLOR_MODE_FALLBACK } from './utils/globals.js'
 export default {
   target: 'static',
   components: true,
+  generate: {
+    fallback: true
+  },
   // ? The env Property: https://nuxtjs.org/api/configuration-env/
   env: {
     url:
