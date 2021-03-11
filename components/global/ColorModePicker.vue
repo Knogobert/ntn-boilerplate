@@ -78,10 +78,11 @@ export default {
   & .icon {
     background-color: var(--bg);
     border-color: var(--border-color-secondary);
+    color: var(--text);
 
     &:hover {
       border-color: var(--border-color);
-      @apply text-primary-900;
+      @apply text-primary-900 bg-primary-200;
     }
   }
 }

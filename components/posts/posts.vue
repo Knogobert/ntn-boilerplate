@@ -36,6 +36,13 @@
       </nuxt-link>
     </li>
   </ul>
+  <div v-else-if="loading" class="cards">
+    <div v-for="placeholder in placeholderClasses" :key="placeholder.id" class="card">
+      <content-placeholders :rounded="true" :class="placeholder">
+        <content-placeholders-heading />
+      </content-placeholders>
+    </div>
+  </div>
   <p v-else class="max-w-5xl mx-auto">
     {{ amount > 1 ? 'Posts not found' : 'Post not found' }}
   </p>
@@ -67,10 +74,19 @@
     data() {
       return {
         posts: [],
+        loading: true,
+      }
+    },
+    computed: {
+      placeholderClasses() {
+        const classes = ['w-full','w-2/3','w-5/6'];
+        return [...Array.from({ length: this.amount }, (v, i) => classes[i % classes.length])]; // repeats classes after one another
       }
     },
     async mounted() {
+      this.loading = true;
       this.posts = await this.fetchPosts();
+      this.loading = false;
     },
     methods: {
       formatDate(dateString) {

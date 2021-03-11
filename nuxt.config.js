@@ -9,6 +9,9 @@ import { COLOR_MODE_FALLBACK } from './utils/globals.js'
 export default {
   target: 'static',
   components: true,
+  generate: {
+    fallback: true
+  },
   // ? The env Property: https://nuxtjs.org/api/configuration-env/
   env: {
     url:
@@ -68,7 +71,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~/plugins/vue-content-placeholders.js'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -115,9 +118,9 @@ export default {
   purgeCSS: {
     mode: 'postcss',
     // ? Whitelisting docs: https://v1.purgecss.com/whitelisting
-    whitelist: ['dark-mode', 'light-mode', 'btn', 'icon', 'main', 'code'],
+    whitelist: ['dark-mode', 'light-mode', 'btn', 'icon', 'main'],
     whitelistPatterns: [/^card/, /^nuxt-content/, /image$/, /title$/],
-    whitelistPatternsChildren: [/^nuxt-content/]
+    whitelistPatternsChildren: [/^nuxt-content/, /code/, /pre/, /token/, /^vue-content-placeholders/]
   },
   colorMode: {
     preference: 'system', // default value of $colorMode.preference

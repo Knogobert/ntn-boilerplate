@@ -52,6 +52,21 @@
     }
   }
 
+  .vue-content-placeholders-heading__content {
+    @apply opacity-75;
+    & .vue-content-placeholders-heading__title {
+      @apply h-6 mb-5 mt-1;
+    }
+  }
+  .dark-mode {
+    & .vue-content-placeholders-heading__title {
+      @apply bg-primary;
+    }
+    & .vue-content-placeholders-heading__subtitle {
+      @apply bg-primary-400;
+    }
+  }
+
   @screen sm {
     .cards {
       & .card {

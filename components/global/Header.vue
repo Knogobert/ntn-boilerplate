@@ -45,11 +45,11 @@ export default {
   & .scrim-bg {
     &::after {
       animation-name: fadeIn2;
-      background: linear-gradient(to bottom, #F3F4F6, cubic-bezier(0.15, 0, 0.45, 1), transparent);
+      background: linear-gradient(to bottom, #e5e7eb, cubic-bezier(0.15, 0, 0.45, 1), transparent);
     }
   }
   & .nuxt-link-exact-active {
-    @apply text-primary-900 border-gray-600 bg-gray-200;
+    @apply text-primary-700 border-gray-600 bg-gray-100;
   }
 }
 

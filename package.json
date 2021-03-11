@@ -1,6 +1,6 @@
 {
   "name": "ntn-boilerplate",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Nuxt-Tailwind-NetlifyCMS boilerplate",
   "author": "Sven Parker <sven@svenparker.com> (https://svenparker.com)",
   "scripts": {
@@ -35,6 +35,7 @@
     "postcss-preset-env": "^6.7.0",
     "prettier": "^1.16.4",
     "tailwindcss": "^1.9.6",
-    "tailwindcss-dark-mode": "^1.1.7"
+    "tailwindcss-dark-mode": "^1.1.7",
+    "vue-content-placeholders": "^0.2.1"
   }
 }
