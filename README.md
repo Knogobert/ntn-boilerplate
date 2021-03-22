@@ -104,7 +104,7 @@ npm run generate
 4. Change font
 
    1. Add/change your font link in `nuxt.config.js` under `head.link`. You can add a `<link rel="stylesheet" href="font.css">` as `link: [{ rel: 'stylesheet', href: 'font.css' }]`, like [this](https://vue-meta.nuxtjs.org/api/#link)
-   2. Then append your font name in `tailwind.config.js` under `theme.extend.fontFamily.sans` (or other). Like `sans: ['Inter', ...defaultTheme.fontFamily.sans]`
+   2. Then append your font name in `tailwind.config.js` under `theme.extend.fontFamily.sans` (or other).
    3. Then if you've uncommented the included netlify plugin "[Subfont](https://github.com/Munter/netlify-plugin-subfont#readme)" in `netlify.toml`, it will automatically post-processes your web page to use an optimal font loading strategy.
 
 ## More info

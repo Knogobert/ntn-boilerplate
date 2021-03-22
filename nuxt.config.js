@@ -1,6 +1,3 @@
-import path from 'path'
-import postcssImport from 'postcss-import'
-import postcssNesting from 'postcss-nesting'
 import postcssPresetEnv from 'postcss-preset-env'
 import postcssEasingGradients from 'postcss-easing-gradients'
 import * as SITE_INFO from './content/site/info.json'
@@ -87,9 +84,6 @@ export default {
     extractCSS: true,
     postcss: {
       plugins: {
-        'postcss-import': postcssImport,
-        tailwindcss: path.resolve(__dirname, './tailwind.config.js'),
-        'postcss-nesting': postcssNesting,
         'postcss-preset-env': postcssPresetEnv({
           stage: 1,
           features: {
@@ -112,17 +106,31 @@ export default {
     dir: 'content'
   },
   tailwindcss: {
+    viewer: false, // disabled because it causes `Error: Cannot find module 'tailwindcss/resolveConfig'`, fixed in https://github.com/nuxt-community/tailwindcss-module/pull/303
     cssPath: '~/assets/css/main.pcss',
     exposeConfig: false // enables `import { theme } from '~tailwind.config'`
   },
   purgeCSS: {
     mode: 'postcss',
-    // ? Whitelisting docs: https://v1.purgecss.com/whitelisting
-    whitelist: ['dark-mode', 'light-mode', 'btn', 'icon', 'main'],
-    whitelistPatterns: [/^card/, /^nuxt-content/, /image$/, /title$/],
-    whitelistPatternsChildren: [/^nuxt-content/, /code/, /pre/, /token/, /^vue-content-placeholders/]
+    // ? Safelisting docs: https://purgecss.com/safelisting.html
+    safelist: {
+      // standard: [],
+      deep: [/dark/, /light/, /btn/, /icon/, /main/],
+      greedy: [
+        /^card/,
+        /^nuxt-content/,
+        /image$/,
+        /title$/,
+        /^nuxt-content/,
+        /code/,
+        /pre/,
+        /token/,
+        /^vue-content-placeholders/
+      ]
+    }
   },
   colorMode: {
+    classSuffix: '',
     preference: 'system', // default value of $colorMode.preference
     fallback: COLOR_MODE_FALLBACK, // fallback value if not system preference found
     componentName: 'ColorScheme',
