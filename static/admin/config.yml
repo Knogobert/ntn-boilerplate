@@ -7,6 +7,9 @@ backend:
   branch: master
   squash_merges: true
 
+# used together with `npx netlify-cms-proxy-server`. https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
+local_backend: true
+
 media_folder: static/img
 public_folder: /img
 
@@ -41,10 +44,11 @@ collections:
     folder: 'content/blog'
     create: true
     format: 'frontmatter'
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{fields.createdAt}}-{{slug}}'
     # editor:
     #   preview: true
     fields:
+      - { label: 'Created Date', name: 'createdAt', widget: 'datetime', date_format: "YYYY-MM-DD", time_format: false }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Description', name: 'description', widget: 'string', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown', required: false }

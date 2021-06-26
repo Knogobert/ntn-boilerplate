@@ -41,7 +41,7 @@ export default {
   @apply text-gray-200 border-gray-400 bg-gray-800 bg-opacity-25 cursor-default;
 }
 
-.light-mode {
+.light {
   & .scrim-bg {
     &::after {
       animation-name: fadeIn2;

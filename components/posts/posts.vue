@@ -102,9 +102,7 @@
           .sortBy(sortBy.key, sortBy.direction)
           .limit(amount)
           .fetch()
-          .catch((err) => {
-            error({ statusCode: 404, message: amount > 1 ? 'Posts not found' : 'Post not found' })
-          });
+          .catch((err) => console.error(err) || []);
       }
     },
   }

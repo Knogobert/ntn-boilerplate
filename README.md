@@ -104,7 +104,7 @@ npm run generate
 4. Change font
 
    1. Add/change your font link in `nuxt.config.js` under `head.link`. You can add a `<link rel="stylesheet" href="font.css">` as `link: [{ rel: 'stylesheet', href: 'font.css' }]`, like [this](https://vue-meta.nuxtjs.org/api/#link)
-   2. Then append your font name in `tailwind.config.js` under `theme.extend.fontFamily.sans` (or other). Like `sans: ['Inter', ...defaultTheme.fontFamily.sans]`
+   2. Then append your font name in `tailwind.config.js` under `theme.extend.fontFamily.sans` (or other).
    3. Then if you've uncommented the included netlify plugin "[Subfont](https://github.com/Munter/netlify-plugin-subfont#readme)" in `netlify.toml`, it will automatically post-processes your web page to use an optimal font loading strategy.
 
 ## More info
@@ -129,6 +129,9 @@ Originally based on [Henry Desroches' nuxt-netlify-cms-starter](https://github.c
 
 - > I added a CSS class, but it doesn't show
 - It is most likely purged by PurgeCSS, make sure it is whitelisted in `purgeCSS` in `nuxt.config.js`
+
+- > I can’t log in to `/admin` on localhost and use my local git as CMS
+- Open up a new terminal and run `npx netlify-cms-proxy-server`, the login again.
 
 - > I tried logging into/saving in Netlify CMS, but I can't
 - It may be that you haven't [enabled Netlify Identity](https://app.netlify.com/sites/YOUR_NETLIFY_SITE_SLUG/settings/identity) or [setup the Git Gateway](https://app.netlify.com/sites/YOUR_NETLIFY_SITE_SLUG/settings/identity#services) correctly, [check the docs](https://www.netlifycms.org/docs/git-gateway-backend/)

@@ -74,7 +74,7 @@ export default {
     color: var(--color-primary);
   }
 }
-.light-mode {
+.light {
   & .icon {
     background-color: var(--bg);
     border-color: var(--border-color-secondary);
