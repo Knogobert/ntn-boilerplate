@@ -130,6 +130,9 @@ Originally based on [Henry Desroches' nuxt-netlify-cms-starter](https://github.c
 - > I added a CSS class, but it doesn't show
 - It is most likely purged by PurgeCSS, make sure it is whitelisted in `purgeCSS` in `nuxt.config.js`
 
+- > I can’t log in to `/admin` on localhost and use my local git as CMS
+- Open up a new terminal and run `npx netlify-cms-proxy-server`, the login again.
+
 - > I tried logging into/saving in Netlify CMS, but I can't
 - It may be that you haven't [enabled Netlify Identity](https://app.netlify.com/sites/YOUR_NETLIFY_SITE_SLUG/settings/identity) or [setup the Git Gateway](https://app.netlify.com/sites/YOUR_NETLIFY_SITE_SLUG/settings/identity#services) correctly, [check the docs](https://www.netlifycms.org/docs/git-gateway-backend/)
 

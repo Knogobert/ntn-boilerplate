@@ -7,6 +7,9 @@ backend:
   branch: master
   squash_merges: true
 
+# used together with `npx netlify-cms-proxy-server`. https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
+local_backend: true
+
 media_folder: static/img
 public_folder: /img
 
