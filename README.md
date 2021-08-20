@@ -30,7 +30,7 @@ An opinionated starter template for a quick start with the following technologie
 
 Use the deploy button to get your own copy of the repository.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/knogobert/ntn-boilerplate&stack=cms)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Knogobert/ntn-boilerplate&stack=cms)
 
 This will setup everything needed for running the CMS:
  - A new repository in your GitHub account with the code

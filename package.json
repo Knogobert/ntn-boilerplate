@@ -2,7 +2,7 @@
   "name": "ntn-boilerplate",
   "version": "2.1.0",
   "description": "Nuxt-Tailwind-NetlifyCMS boilerplate",
-  "author": "Sven Parker <sven@svenparker.com> (https://svenparker.com)",
+  "author": "Sven Parker <hello+dev@svenparker.com> (https://svenparker.com)",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/knogobert/ntn-boilerplate#readme"
+    "url": "https://github.com/Knogobert/ntn-boilerplate#readme"
   },
   "license": "MIT",
   "dependencies": {
