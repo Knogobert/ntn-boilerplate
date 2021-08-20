@@ -118,7 +118,6 @@ export default {
       deep: [/dark/, /light/, /btn/, /icon/, /main/],
       greedy: [
         /^card/,
-        /^nuxt-content/,
         /image$/,
         /title$/,
         /^nuxt-content/,
