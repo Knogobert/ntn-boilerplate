@@ -21,7 +21,7 @@
   "devDependencies": {
     "@nuxtjs/color-mode": "^2.1.1",
     "@nuxtjs/pwa": "^3.3.5",
-    "@nuxtjs/svg": "^0.1.12",
+    "@nuxtjs/svg": "^0.3.0",
     "@nuxtjs/tailwindcss": "^4.2.1",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
