@@ -1,6 +1,7 @@
 [build]
 command = "npm run generate"
 publish = "dist"
+environment = { NODE_VERSION = "16.11.1", NPM_VERSION = "8.1.0" }
 
 # [[plugins]]
 # package = "netlify-plugin-subfont"
