@@ -5,7 +5,7 @@
       :key="index"
     >
       <nuxt-link
-        :to="`${postType}/${post.slug}`"
+        :to="`/${postType}/${post.slug}`"
         class="card card--clickable"
       >
         <template v-if="postType === 'projects'">
