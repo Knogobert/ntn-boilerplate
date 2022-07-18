@@ -23,7 +23,7 @@
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/svg": "^0.4.0",
     "@nuxtjs/tailwindcss": "^4.2.1",
-    "eslint": "^8.14.0",
+    "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "netlify-cli": "^10.1.0",
