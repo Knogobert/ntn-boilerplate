@@ -15,7 +15,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@nuxt/content": "^1.15.1",
+    "@nuxt/content": "^2.0.1",
     "nuxt": "^2.15.8"
   },
   "devDependencies": {
@@ -23,14 +23,14 @@
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/svg": "^0.4.0",
     "@nuxtjs/tailwindcss": "^4.2.1",
-    "eslint": "^8.14.0",
+    "eslint": "^8.22.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "netlify-cli": "^10.1.0",
+    "netlify-cli": "^11.1.0",
     "nuxt-purgecss": "^1.0.0",
     "postcss": "^8.4.13",
     "postcss-easing-gradients": "^3.0.1",
-    "postcss-preset-env": "^7.4.4",
+    "postcss-preset-env": "^7.8.0",
     "prettier": "^2.6.2",
     "vue-content-placeholders": "^0.2.1"
   }
