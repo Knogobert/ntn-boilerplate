@@ -30,7 +30,7 @@
     "nuxt-purgecss": "^1.0.0",
     "postcss": "^8.4.13",
     "postcss-easing-gradients": "^3.0.1",
-    "postcss-preset-env": "^7.4.4",
+    "postcss-preset-env": "^7.8.0",
     "prettier": "^2.6.2",
     "vue-content-placeholders": "^0.2.1"
   }
