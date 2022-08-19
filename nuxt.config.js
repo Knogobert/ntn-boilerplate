@@ -1,9 +1,10 @@
+import { defineNuxtConfig } from 'nuxt'
 import postcssPresetEnv from 'postcss-preset-env'
 import postcssEasingGradients from 'postcss-easing-gradients'
 import * as SITE_INFO from './content/site/info.json'
 import { COLOR_MODE_FALLBACK } from './utils/globals.js'
 
-export default {
+export default defineNuxtConfig({
   target: 'static',
   components: true,
   generate: {
@@ -70,13 +71,9 @@ export default {
    */
   plugins: ['~/plugins/vue-content-placeholders.js'],
   /*
-   ** Nuxt.js dev-modules
-   */
-  buildModules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxtjs/svg', '@nuxtjs/pwa'],
-  /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxt/content', 'nuxt-purgecss'],
+  modules: ['@nuxt/content', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss' ], // No Nuxt 3 support yet: '@nuxtjs/pwa', '@nuxtjs/svg', 'nuxt-purgecss',
   /*
    ** Build configuration
    */
@@ -106,28 +103,28 @@ export default {
     dir: 'content'
   },
   tailwindcss: {
-    viewer: false, // disabled because it causes `Error: Cannot find module 'tailwindcss/resolveConfig'`, fixed in https://github.com/nuxt-community/tailwindcss-module/pull/303
+    viewer: true,
     cssPath: '~/assets/css/main.pcss',
     exposeConfig: false // enables `import { theme } from '#tailwind.config'`
   },
-  purgeCSS: {
-    mode: 'postcss',
-    // ? Safelisting docs: https://purgecss.com/safelisting.html
-    safelist: {
-      // standard: [],
-      deep: [/dark/, /light/, /btn/, /icon/, /main/],
-      greedy: [
-        /^card/,
-        /image$/,
-        /title$/,
-        /^nuxt-content/,
-        /code/,
-        /pre/,
-        /token/,
-        /^vue-content-placeholders/
-      ]
-    }
-  },
+  // purgeCSS: { // Disabled because of no current Nuxt 3 support
+  //   mode: 'postcss',
+  //   // ? Safelisting docs: https://purgecss.com/safelisting.html
+  //   safelist: {
+  //     // standard: [],
+  //     deep: [/dark/, /light/, /btn/, /icon/, /main/],
+  //     greedy: [
+  //       /^card/,
+  //       /image$/,
+  //       /title$/,
+  //       /^nuxt-content/,
+  //       /code/,
+  //       /pre/,
+  //       /token/,
+  //       /^vue-content-placeholders/
+  //     ]
+  //   }
+  // },
   colorMode: {
     classSuffix: '',
     preference: 'system', // default value of $colorMode.preference
@@ -139,17 +136,17 @@ export default {
       }
     }
   },
-  pwa: {
-    icon: {
-      source: 'static/icon.png',
-      filename: 'icon.png'
-    },
-    manifest: { name: SITE_INFO.sitename || process.env.npm_package_name || '', lang: process.env.lang },
-    meta: {
-      name: SITE_INFO.sitename || process.env.npm_package_name || '',
-      lang: process.env.lang,
-      ogHost: process.env.URL,
-      ogImage: '/preview.jpg'
-    }
-  }
-}
+  // pwa: { // Disabled because of no current Nuxt 3 support
+  //   icon: {
+  //     source: 'static/icon.png',
+  //     filename: 'icon.png'
+  //   },
+  //   manifest: { name: SITE_INFO.sitename || process.env.npm_package_name || '', lang: process.env.lang },
+  //   meta: {
+  //     name: SITE_INFO.sitename || process.env.npm_package_name || '',
+  //     lang: process.env.lang,
+  //     ogHost: process.env.URL,
+  //     ogImage: '/preview.jpg'
+  //   }
+  // }
+});

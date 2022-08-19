@@ -2,6 +2,6 @@
   <div class="wrapper">
     <Header />
     <nuxt />
-    <ColorModePicker />
+    <!-- <ColorModePicker /> -->
   </div>
 </template>

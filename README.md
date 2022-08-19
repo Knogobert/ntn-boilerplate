@@ -10,14 +10,12 @@ An opinionated starter template for a quick start with the following technologie
 
 ## 🔋 Batteries included
 
-- Nuxt.js (in "universal mode", where both SEO and speed is great)
-- Vue 2
+- Nuxt 3 (in "universal mode", where both SEO and speed is great)
+- Vue 3
 - Vuex (supported by adding to `/store`, but not implemented)
 - PostCSS (no SCSS)
-- Tailwind
-- PurgeCSS (removes unused CSS-selectors)
+- Tailwind 3
 - Dark mode & ColorModePicker (Set to "dark mode first")
-- PWA (install website as standalone app)
 - Netlify CMS (no need for a separate server)
 - Prettier
 - Nuxt-content (w/ exensible support for markdown and code-blocks)

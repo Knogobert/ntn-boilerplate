@@ -7,16 +7,8 @@
   </main>
 </template>
 
-<script>
-export default {
-  async asyncData({ $content, error }) {
-    let posts;
-    try {
-      posts = await $content("blog").fetch();
-    } catch (e) {
-      error({ message: "Blog posts not found" });
-    }
-    return { posts };
-  },
-}
+<script setup>
+  const { data: posts, pending, refresh, error } = await useAsyncData('posts-list', () => queryContent('/blog').find())
+
+  if (error) showError({ message: "Blog posts not found", cause: error });
 </script>

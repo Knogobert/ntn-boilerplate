@@ -37,3 +37,14 @@ export default {
   }
 }
 </script>
+
+<script setup>
+//   const { data: post, pending, refresh, error } = await useAsyncData('post', () => queryContent('/blog').find())
+
+  // if (error) showError({ message: "Blog posts not found", cause: error });
+
+const formatDate = (dateString) => {
+  const date = new Date(dateString)
+  return date.toLocaleDateString(process.env.lang) || ''
+};
+</script>

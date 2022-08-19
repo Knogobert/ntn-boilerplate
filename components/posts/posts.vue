@@ -98,11 +98,14 @@
           amount = this.amount,
           sortBy = this.sortBy,
         ) {
-        return this.$content(postType)
-          .sortBy(sortBy.key, sortBy.direction)
-          .limit(amount)
-          .fetch()
+        return queryContent(`/${postType}`)
+          .find()
           .catch((err) => console.error(err) || []);
+        // return this.$content(postType)
+        //   .sortBy(sortBy.key, sortBy.direction)
+        //   .limit(amount)
+        //   .fetch()
+        //   .catch((err) => console.error(err) || []);
       }
     },
   }
