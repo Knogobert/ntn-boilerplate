@@ -26,22 +26,19 @@ solacia: inpensior munere quae. Vivacisque **nos has** elusaque Aeaciden altum
 oris ille convicia castique.
 
 ```js{1,4}[posts.vue]
-formatDate(dateString) {
-  const date = new Date(dateString)
-  return date.toLocaleDateString(process.env.lang) || ''
-},
-async fetchPosts(
-    postType = this.postType,
-    amount = this.amount,
-    sortBy = this.sortBy,
-  ) {
-  return this.$content(postType)
-    .sortBy(sortBy.key, sortBy.direction)
-    .limit(amount)
-    .fetch()
-    .catch((err) => {
-      error({ statusCode: 404, message: amount > 1 ? 'Posts not found' : 'Post not found' })
-    });
+const { data: posts, pending, refresh, error } = await useLazyAsyncData(
+  `${props.postType}-list`,
+  () => markRaw(
+    queryContent(`/${props.postType}`)
+      .sort({ [props.sortBy.key]: props.sortBy.direction })
+    .limit(props.amount)
+    .find()
+    .catch((err) => console.error(err) || [])
+  )
+)
+
+const formatDate = (dateString) => {
+  return new Date(dateString).toLocaleDateString(runtimeConfig.public.lang) || ''
 }
 ```
 

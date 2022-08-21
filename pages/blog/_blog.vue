@@ -32,19 +32,20 @@ export default {
   methods: {
     formatDate(dateString) {
       const date = new Date(dateString)
-      return date.toLocaleDateString(process.env.lang) || ''
+      return date.toLocaleDateString(procruntimeConfig.public.lang) || ''
     }
   }
 }
 </script>
 
 <script setup>
+const runtimeConfig = useRuntimeConfig()
+
 //   const { data: post, pending, refresh, error } = await useAsyncData('post', () => queryContent('/blog').find())
 
   // if (error) showError({ message: "Blog posts not found", cause: error });
 
 const formatDate = (dateString) => {
-  const date = new Date(dateString)
-  return date.toLocaleDateString(process.env.lang) || ''
+  return new Date(dateString).toLocaleDateString(runtimeConfig.public.lang) || ''
 };
 </script>

@@ -1,2 +1,2 @@
-# Uncomment the following line if you want to use git lfs for the static/img folder
-#static/img/** filter=lfs diff=lfs merge=lfs -text
+# Uncomment the following line if you want to use git lfs for the public/img folder
+#public/img/** filter=lfs diff=lfs merge=lfs -text

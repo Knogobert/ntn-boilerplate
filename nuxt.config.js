@@ -10,13 +10,18 @@ export default defineNuxtConfig({
   generate: {
     fallback: true
   },
-  // ? The env Property: https://nuxtjs.org/api/configuration-env/
-  env: {
-    url:
-      process.env.NODE_ENV === 'production'
-        ? process.env.URL || 'http://createADotEnvFileAndSetURL'
-        : 'http://localhost:3000',
-    lang: SITE_INFO.sitelang || 'en-US'
+  // ? The env/runtimeConfig Property: https://v3.nuxtjs.org/guide/features/runtime-config/
+  runtimeConfig: {
+    // The private keys which are only available within server-side
+    apiSecret: '123',
+    // Keys within public, will be also exposed to the client-side
+    public: {
+      url:
+        process.env.NODE_ENV === 'production'
+          ? process.env.URL || 'http://createADotEnvFileAndSetURL'
+          : 'http://localhost:3000',
+      lang: SITE_INFO.sitelang || 'en-US'
+    }
   },
   /*
    ** Headers of the page
@@ -138,7 +143,7 @@ export default defineNuxtConfig({
   },
   // pwa: { // Disabled because of no current Nuxt 3 support
   //   icon: {
-  //     source: 'static/icon.png',
+  //     source: 'public/icon.png',
   //     filename: 'icon.png'
   //   },
   //   manifest: { name: SITE_INFO.sitename || process.env.npm_package_name || '', lang: process.env.lang },

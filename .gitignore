@@ -65,7 +65,8 @@ typings/
 # next.js build output
 .next
 
-# nuxt.js build output
+# Nuxt dev/build outputs
+.output
 .nuxt
 
 # Nuxt generate

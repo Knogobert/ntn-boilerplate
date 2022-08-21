@@ -10,9 +10,8 @@ If you are in local development-mode (`npm run dev`) you can double-click here t
 
 
 ```js{1,4}[posts.vue]
-formatDate(dateString) {
-  const date = new Date(dateString)
-  return date.toLocaleDateString(process.env.lang) || ''
+const formatDate = (dateString) => {
+  return new Date(dateString).toLocaleDateString(runtimeConfig.public.lang) || ''
 }
 ```
 
