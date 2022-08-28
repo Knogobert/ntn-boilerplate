@@ -1,9 +1,9 @@
 <template>
   <div v-if="pending" class="cards">
     <div v-for="placeholder in placeholderClasses" :key="placeholder.id" class="card">
-      <content-placeholders :rounded="true" :class="placeholder">
-        <content-placeholders-heading />
-      </content-placeholders>
+      <SkeletonContentPlaceholders :rounded="true" :class="placeholder">
+        <SkeletonContentPlaceholdersHeading />
+      </SkeletonContentPlaceholders>
     </div>
   </div>
   <ul v-else-if="posts?.length > 0" class="cards">
@@ -73,7 +73,8 @@ const { data: posts, pending, refresh, error } = await useLazyAsyncData(
     .catch((err) => console.error(err) || [])
   )
 )
-const storedPosts = () => useState(`stored-${props.postType}-list`)
+// const storedPosts = () => useState(`stored-${props.postType}-list`)
+const storedPosts = () => useState(`${props.postType}-list`)
 
 const placeholderClasses = computed(() => {
   const classes = ['w-full','w-2/3','w-5/6'];

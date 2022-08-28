@@ -6,7 +6,6 @@ import { COLOR_MODE_FALLBACK } from './utils/globals.js'
 
 export default defineNuxtConfig({
   target: 'static',
-  components: true,
   generate: {
     fallback: true
   },
@@ -74,7 +73,7 @@ export default defineNuxtConfig({
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/vue-content-placeholders.js'],
+  plugins: [],
   /*
    ** Nuxt.js modules
    */
@@ -126,7 +125,7 @@ export default defineNuxtConfig({
   //       /code/,
   //       /pre/,
   //       /token/,
-  //       /^vue-content-placeholders/
+  //       /^content-placeholders/
   //     ]
   //   }
   // },
