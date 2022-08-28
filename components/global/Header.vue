@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
+<style lang="pcss" scoped>
 .scrim-bg {
   &::before {
     content: '';

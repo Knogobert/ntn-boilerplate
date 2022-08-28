@@ -25,7 +25,7 @@
               <h3 class="card-title">{{ post.title }}</h3>
               <h6 v-if="post.createdAt"
                 class="self-start inline-block mt-0 py-1 px-2 bg-gray text-white text-base font-medium rounded-sm whitespace-no-wrap">
-                {{ formatDate(post.createdAt) }}
+                {{ useFormatDate(post.createdAt) }}
               </h6>
             </span>
             <p class="mt-2">{{ post.description }}</p>
@@ -40,8 +40,6 @@
 </template>
 
 <script setup>
-const runtimeConfig = useRuntimeConfig()
-
 const props = defineProps({
   postType: {
     type: String,
@@ -73,17 +71,13 @@ const { data: posts, pending, refresh, error } = await useLazyAsyncData(
     .catch((err) => console.error(err) || [])
   )
 )
-// const storedPosts = () => useState(`stored-${props.postType}-list`)
-const storedPosts = () => useState(`${props.postType}-list`)
 
 const placeholderClasses = computed(() => {
   const classes = ['w-full','w-2/3','w-5/6'];
   return [...Array.from({ length: props.amount }, (v, i) => classes[i % classes.length])]; // repeats classes after one another
 });
 
-const formatDate = (dateString) => {
-  return new Date(dateString).toLocaleDateString(runtimeConfig.public.lang) || ''
-}
-
-if (error._value) showError({ message: "Blog posts not found", cause: error });
+// const storedPosts = () => useState(`stored-${props.postType}-list`)
+// const storedPosts = useState(`${props.postType}-list`);
+// if (error._value) showError({ message: "Blog posts not found", cause: error });
 </script>
