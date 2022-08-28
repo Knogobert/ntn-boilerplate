@@ -77,7 +77,7 @@ export default defineNuxtConfig({
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxt/content', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss' ], // No Nuxt 3 support yet: '@nuxtjs/pwa', '@nuxtjs/svg', 'nuxt-purgecss',
+  modules: ['@nuxt/content', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss', 'nuxt-svgo' ], // No Nuxt 3 support yet: '@nuxtjs/pwa', '@nuxtjs/svg', 'nuxt-purgecss',
   /*
    ** Build configuration
    */
