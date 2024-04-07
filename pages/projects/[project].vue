@@ -10,7 +10,12 @@
         <!-- <h6 class="inline py-1 px-2 mr-1 bg-gray text-white text-sm font-medium rounded-sm">{{ post.category }}</h6> -->
         <h1 class="">{{ post.title }}</h1>
         <p class="mt-1 mb-8 text-primary-600 dark:text-primary-400">{{ post.description }}</p>
-        <ContentRenderer :value="post" />
+        <ContentRenderer :value="post">
+          <ContentRendererMarkdown :value="post" />
+          <template #empty>
+            <p>No content found.</p>
+          </template>
+        </ContentRenderer>
         <div v-if="post.gallery" class="nuxt-content">
           <img v-for="image in post.gallery" class="image" :key="image.id" :src="image">
         </div>
@@ -24,7 +29,7 @@ const route = useRoute()
 
 const { data: post, pending, refresh, error } = await useAsyncData(
   'post',
-  () => queryContent('/project', route.params.project).findOne()
+  () => queryContent('/projects', route.params.project).findOne()
     .catch((err) => console.error(err) || [])
 )
 

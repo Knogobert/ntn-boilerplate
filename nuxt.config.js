@@ -1,4 +1,3 @@
-import { defineNuxtConfig } from 'nuxt'
 import postcssPresetEnv from 'postcss-preset-env'
 import postcssEasingGradients from 'postcss-easing-gradients'
 import * as SITE_INFO from './content/site/info.json'
