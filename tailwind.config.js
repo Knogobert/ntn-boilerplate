@@ -54,5 +54,5 @@ module.exports = {
     'plugins/**/*.js',
     // 'nuxt.config.js'
   ],
-  // Set safelist in nuxt.config.js -> purgeCSS.safelist: ['btn', 'icon']
+  safelist: [],
 }

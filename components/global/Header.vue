@@ -33,8 +33,8 @@ export default {
     z-index: -1;
     opacity: 1;
     animation: fadeIn1 500ms ease-in-out;
-    @apply pointer-events-none absolute bottom-0 inset-x-0 h-16 -mb-12;
-    background: linear-gradient(to bottom, #111827, cubic-bezier(0.15, 0, 0.45, 1), transparent);
+    @apply pointer-events-none absolute bottom-0 inset-x-0 h-12 -mb-8;
+    background: linear-gradient(to bottom, #111827, transparent);
   }
 }
 .nuxt-link-exact-active {
@@ -45,7 +45,7 @@ export default {
   & .scrim-bg {
     &::after {
       animation-name: fadeIn2;
-      background: linear-gradient(to bottom, #e5e7eb, cubic-bezier(0.15, 0, 0.45, 1), transparent);
+      background: linear-gradient(to bottom, #e5e7eb, transparent);
     }
   }
   & .nuxt-link-exact-active {
