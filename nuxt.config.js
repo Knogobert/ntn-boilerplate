@@ -112,34 +112,40 @@ export default defineNuxtConfig({
       }
     }
   },
-  // pwa: { // TODO: Needs more work
-  //   manifest: {
-  //     name: SITE_INFO.sitename || process.env.npm_package_name || '',
-  //     lang: process.env.lang,
-  //     icons: [
-  //       {
-  //         src: 'icon.png',
-  //         sizes: '64x64',
-  //         type: 'image/png',
-  //       },
-  //       {
-  //         src: 'icon.png',
-  //         sizes: '192x192',
-  //         type: 'image/png',
-  //       },
-  //       {
-  //         src: 'icon.png',
-  //         sizes: '512x512',
-  //         type: 'image/png',
-  //         purpose: 'any maskable',
-  //       }
-  //     ],
-  //   },
-  //   meta: {
-  //     name: SITE_INFO.sitename || process.env.npm_package_name || '',
-  //     lang: process.env.lang,
-  //     ogHost: process.env.URL,
-  //     ogImage: '/preview.jpg'
-  //   }
-  // }
+  pwa: {
+    manifest: {
+      name: SITE_INFO.sitename || process.env.npm_package_name || '',
+      lang: process.env.lang,
+      icons: [
+        {
+          src: 'pwa-64x64.png',
+          sizes: '64x64',
+          type: 'image/png',
+        },
+        {
+          src: 'pwa-192x192.png',
+          sizes: '192x192',
+          type: 'image/png',
+        },
+        {
+          src: 'pwa-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any',
+        },
+        {
+          src: 'maskable-icon-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'maskable',
+        }
+      ],
+    },
+    meta: {
+      name: SITE_INFO.sitename || process.env.npm_package_name || '',
+      lang: process.env.lang,
+      ogHost: process.env.URL,
+      ogImage: '/preview.jpg'
+    }
+  }
 });
