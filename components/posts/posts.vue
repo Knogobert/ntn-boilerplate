@@ -53,10 +53,10 @@ const props = defineProps({
     default: 10,
     validator: (val) => val >= 0 && val < 100,
   },
-  sortBy: { // ? https://content.nuxtjs.org/fetching#sortbykey-direction
+  sortBy: { // ? https://content.nuxt.com/composables/query-content#sortoptions
     type: Object,
     default: () => ({
-      key: 'slug',
+      key: 'createdAt',
       direction: 1 // you may want `-1` here
     }),
     validator: (obj) => typeof obj.key === 'string' && typeof obj.direction === 'number',
