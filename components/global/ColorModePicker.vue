@@ -6,9 +6,9 @@
 
 <script>
 import { COLOR_MODE_FALLBACK } from '~/utils/globals.js'
-import IconSystem from '~/components/icons/system.svg?inline'
-import IconLight from '~/components/icons/light.svg?inline'
-import IconDark from '~/components/icons/dark.svg?inline'
+import IconSystem from '~/components/icons/system.svg'
+import IconLight from '~/components/icons/light.svg'
+import IconDark from '~/components/icons/dark.svg'
 
 export default {
   name: 'ColorModePicker',
@@ -57,7 +57,7 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
+<style lang="pcss" scoped>
 .icon {
   width: 44px;
   height: 44px;
